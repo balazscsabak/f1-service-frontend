@@ -6,15 +6,15 @@ type PropTypes = {
 
 const DriverInfo = ({ driver }: PropTypes) => {
 	return (
-		<motion.div className="whitespace-nowrap">
+		<motion.div className="md:whitespace-nowrap">
 			<motion.div layout>
-				<div className="font-bold">
+				<div className="text-sm md:text-base font-bold">
 					{driver.firstname} {driver.lastname}
 				</div>
-				<div className="class-sm">{driver.team}</div>
-				<div className="class-sm font-medium">{driver.code}</div>
+				<div className="text-sm">{driver.team}</div>
+				<div className="font-medium">{driver.code}</div>
 				<div className="flex justify-end">
-					<div className="mr-4 flex items-center font-semibold justify-center -mt-4 text-lg w-8 h-8 rounded-full bg-yellow-500">
+					<div className="hidden md:flex mr-4  items-center font-semibold justify-center -mt-4 text-lg w-8 h-8 rounded-full bg-yellow-500">
 						{driver.place}
 					</div>
 				</div>
