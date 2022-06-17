@@ -7,3 +7,25 @@ body,
 html {
 	@apply font-montserrat;
 }
+
+body {
+	background-image: url('./assets/images/tire-vec-3.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+}
+
+.position-box {
+	height: calc(100vh - 60px);
+	top: 30px;
+	left: 30px;
+	width: 170px;
+	position: fixed;
+	border-radius: 8px;
+	background-color: rgb(16, 16, 16);
+	color: rgb(237, 237, 237);
+	overflow-y: auto;
+
+	@apply border border-yellow-500;
+}

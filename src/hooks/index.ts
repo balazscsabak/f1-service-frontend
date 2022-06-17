@@ -1,3 +1,4 @@
 import useDrivers from './useDrivers';
+import useNotify from './useNotify';
 
-export { useDrivers };
+export { useDrivers, useNotify };
