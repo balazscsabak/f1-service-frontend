@@ -26,9 +26,9 @@ const DriversWrapper = () => {
 							exit={{ opacity: 1 }}
 							layout
 							key={driver.id}
-							className={`flex w-full ${
-								i % 2 === 0 ? 'justify-start' : 'justify-end'
-							} -mb-4`}
+							className={`flex w-full justify-center ${
+								i % 2 === 0 ? 'md:justify-start' : 'md:justify-end'
+							} mb-4 md:-mb-4`}
 						>
 							<div className="relative select-none">
 								<DriverBox driver={driver} />
