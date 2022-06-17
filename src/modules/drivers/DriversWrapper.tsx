@@ -20,6 +20,7 @@ const DriversWrapper = () => {
 				<AnimatePresence>
 					{drivers.map((driver, i) => (
 						<motion.div
+							id={`${driver.id}`}
 							animate={{ opacity: 1 }}
 							initial={{ opacity: 0 }}
 							exit={{ opacity: 1 }}

@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import Positions from '../../common/race/Positions';
+import RaceTrackMap from '../../common/race/RaceTrackMap';
 import { useDrivers } from '../../hooks';
 import DriversWrapper from '../../modules/drivers/DriversWrapper';
 import { API_URLS } from '../../static';
@@ -29,6 +31,8 @@ const Drivers = () => {
 			<div>
 				<DriversWrapper />
 			</div>
+			<RaceTrackMap />
+			<Positions />
 		</div>
 	);
 };
