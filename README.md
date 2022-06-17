@@ -13,3 +13,9 @@ npm install
 
 npm start
 </pre>
+
+### Or use it with Docker
+
+<pre>
+docker-compose up -d
+</pre>

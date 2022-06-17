@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  sample-prod:
+    container_name: f1-service-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3111:80'
