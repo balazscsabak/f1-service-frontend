@@ -7,3 +7,11 @@ body,
 html {
 	@apply font-montserrat;
 }
+
+body {
+	background-image: url('./assets/images/tire-vec-3.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+}

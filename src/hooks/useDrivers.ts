@@ -31,9 +31,29 @@ export default function useDrivers() {
 		driversDispatch({ type: 'SET_DRIVERS', payload: drivers });
 	};
 
+	const driverTakeover = async (driver: Driver, signal: AbortSignal) => {
+		try {
+			const res = await axios.post<Driver[]>(
+				`${API_URLS.BASE}/api/drivers/${driver.id}/overtake`,
+				{
+					signal: signal,
+				}
+			);
+
+			if (res.status !== 200 || !res.data || res.data.length < 0) {
+				throw new Error('Error on attempting takeover!');
+			}
+
+			return res.data as Driver[];
+		} catch (error) {
+			return false;
+		}
+	};
+
 	return {
 		driversState,
 		getDrivers,
 		setDrivers,
+		driverTakeover,
 	};
 }
