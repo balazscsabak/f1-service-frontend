@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useDrivers } from '../../hooks';
+import DriversWrapper from '../../modules/drivers/DriversWrapper';
 import { API_URLS } from '../../static';
 
 const Drivers = () => {
@@ -23,7 +24,13 @@ const Drivers = () => {
 		};
 	}, []);
 
-	return <div>Drivers</div>;
+	return (
+		<div>
+			<div>
+				<DriversWrapper />
+			</div>
+		</div>
+	);
 };
 
 export default Drivers;
