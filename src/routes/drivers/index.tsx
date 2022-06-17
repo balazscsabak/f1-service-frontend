@@ -4,11 +4,10 @@ import Positions from '../../common/race/Positions';
 import RaceTrackMap from '../../common/race/RaceTrackMap';
 import { useDrivers, useNotify } from '../../hooks';
 import DriversWrapper from '../../modules/drivers/DriversWrapper';
-import { API_URLS } from '../../static';
 
 const Drivers = () => {
 	const [loading, setLoading] = useState(false);
-	const { driversState, getDrivers, setDrivers } = useDrivers();
+	const { getDrivers, setDrivers } = useDrivers();
 	const { notifyError } = useNotify();
 
 	useEffect(() => {

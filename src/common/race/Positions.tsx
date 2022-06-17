@@ -18,6 +18,7 @@ const Positions = () => {
 							<div className="ml-3 font-medium">{driver.code}</div>
 							<div className="ml-3 font-medium text-xs">
 								<img
+									alt="flag-img"
 									style={{ width: 20 }}
 									src={`https://countryflagsapi.com/png/${driver.country}`}
 								/>

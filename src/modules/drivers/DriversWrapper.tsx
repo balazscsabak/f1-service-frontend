@@ -13,7 +13,7 @@ const DriversWrapper = () => {
 	return (
 		<div>
 			<div className="w-64 mb-10 mx-auto">
-				<img src={FlagImg} />
+				<img src={FlagImg} alt="flag-race-img" />
 			</div>
 
 			<motion.div layout className="max-w-xs w-full mx-auto">
@@ -27,7 +27,7 @@ const DriversWrapper = () => {
 							layout
 							key={driver.id}
 							className={`flex w-full ${
-								i % 2 == 0 ? 'justify-start' : 'justify-end'
+								i % 2 === 0 ? 'justify-start' : 'justify-end'
 							} -mb-4`}
 						>
 							<div className="relative select-none">
