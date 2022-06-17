@@ -7,7 +7,7 @@ type PropTypes = {
 };
 
 const DriverController = ({ driver }: PropTypes) => {
-	const { notifyInfo, notifySuccess } = useNotify();
+	const { notifyInfo, notifyError, notifySuccess } = useNotify();
 	const { driverTakeover, setDrivers } = useDrivers();
 
 	const attemptOvertake = async () => {
@@ -30,8 +30,9 @@ const DriverController = ({ driver }: PropTypes) => {
 			];
 
 			notifySuccess(texts[rndNumber]);
+		} else {
+			notifyError('Server error, please try again later');
 		}
-		console.log(res);
 	};
 
 	return (
